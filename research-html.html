@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research Publications - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p class="subtitle">Research Scientist | Your Field</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html" class="active">Research</a></li>
+                    <li><a href="grants.html">Grants & Awards</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Research Publications</h2>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All Publications</button>
+                <button class="filter-btn" data-filter="journal">Journal Articles</button>
+                <button class="filter-btn" data-filter="conference">Conference Papers</button>
+                <button class="filter-btn" data-filter="book">Book Chapters</button>
+            </div>
+            
+            <div class="publication-list">
+                <h3>Journal Articles</h3>
+                
+                <div class="publication journal">
+                    <div class="pub-meta">
+                        <span class="pub-year">2024</span>
+                    </div>
+                    <div class="pub-content">
+                        <h4>Title of Your Journal Article</h4>
+                        <p class="authors">Your Name, Co-author One, Co-author Two</p>
+                        <p class="journal"><em>Journal Name</em>, Volume(Issue), pages.</p>
+                        <p class="abstract-toggle"><a href="#" onclick="toggleAbstract(this); return false;">Show Abstract</a></p>
+                        <div class="abstract">
+                            <p>Abstract text goes here. This is a brief summary of your research article, highlighting the key findings, methodology, and conclusions of your study.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="doi-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication journal">
+                    <div class="pub-meta">
+                        <span class="pub-year">2023</span>
+                    </div>
+                    <div class="pub-content">
+                        <h4>Another Journal Article Title</h4>
+                        <p class="authors">Your Name, Different Co-author</p>
+                        <p class="journal"><em>Another Journal Name</em>, Volume(Issue), pages.</p>
+                        <p class="abstract-toggle"><a href="#" onclick="toggleAbstract(this); return false;">Show Abstract</a></p>
+                        <div class="abstract">
+                            <p>Abstract text goes here. This is a brief summary of your research article, highlighting the key findings, methodology, and conclusions of your study.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="doi-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Conference Papers</h3>
+                
+                <div class="publication conference">
+                    <div class="pub-meta">
+                        <span class="pub-year">2024</span>
+                    </div>
+                    <div class="pub-content">
+                        <h4>Title of Your Conference Paper</h4>
+                        <p class="authors">Your Name, Co-author One</p>
+                        <p class="conference">In <em>Proceedings of Conference Name</em>, Location, Date.</p>
+                        <p class="abstract-toggle"><a href="#" onclick="toggleAbstract(this); return false;">Show Abstract</a></p>
+                        <div class="abstract">
+                            <p>Abstract text goes here. This is a brief summary of your conference paper, highlighting the key findings, methodology, and conclusions of your study.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="doi-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                            <a href="#" class="slides-link"><i class="fas fa-desktop"></i> Slides</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="publication conference">
+                    <div class="pub-meta">
+                        <span class="pub-year">2022</span>
+                    </div>
+                    <div class="pub-content">
+                        <h4>Another Conference Paper Title</h4>
+                        <p class="authors">Your Name, Different Co-author</p>
+                        <p class="conference">In <em>Proceedings of Another Conference</em>, Location, Date.</p>
+                        <p class="abstract-toggle"><a href="#" onclick="toggleAbstract(this); return false;">Show Abstract</a></p>
+                        <div class="abstract">
+                            <p>Abstract text goes here. This is a brief summary of your conference paper, highlighting the key findings, methodology, and conclusions of your study.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="doi-link"><i class="fas fa-external-link-alt"></i> DOI</a>
+                            <a href="#" class="pdf-link"><i class="fas fa-file-pdf"></i> PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <h3>Book Chapters</h3>
+                
+                <div class="publication book">
+                    <div class="pub-meta">
+                        <span class="pub-year">2023</span>
+                    </div>
+                    <div class="pub-content">
+                        <h4>Title of Your Book Chapter</h4>
+                        <p class="authors">Your Name, Co-author</p>
+                        <p class="book">In <em>Book Title</em>, Editor Names (Eds.), Publisher, pages.</p>
+                        <p class="abstract-toggle"><a href="#" onclick="toggleAbstract(this); return false;">Show Abstract</a></p>
+                        <div class="abstract">
+                            <p>Abstract or summary text goes here. This is a brief description of your book chapter, highlighting the main themes and contributions.</p>
+                        </div>
+                        <div class="pub-links">
+                            <a href="#" class="doi-link"><i class="fas fa-external-link-alt"></i> Publisher Link</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
