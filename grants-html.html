@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grants & Awards - Your Name</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Your Name</h1>
+            <p class="subtitle">Research Scientist | Your Field</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="research.html">Research</a></li>
+                    <li><a href="grants.html" class="active">Grants & Awards</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="container">
+            <h2>Grants & Awards</h2>
+            
+            <div class="filter-controls">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="grant">Grants</button>
+                <button class="filter-btn" data-filter="award">Awards</button>
+                <button class="filter-btn" data-filter="fellowship">Fellowships</button>
+            </div>
+            
+            <div class="grants-list">
+                <h3>Research Grants</h3>
+                
+                <div class="grant-item grant">
+                    <div class="grant-meta">
+                        <span class="grant-year">2023-2026</span>
+                        <span class="grant-amount">$XXX,XXX</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Title of Research Grant</h4>
+                        <p class="funder">Funding Agency/Organization</p>
+                        <p class="role">Principal Investigator</p>
+                        <p class="description">Brief description of the research project funded by this grant, including its goals, methodologies, and expected outcomes.</p>
+                    </div>
+                </div>
+                
+                <div class="grant-item grant">
+                    <div class="grant-meta">
+                        <span class="grant-year">2021-2023</span>
+                        <span class="grant-amount">$XX,XXX</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Another Grant Title</h4>
+                        <p class="funder">Another Funding Agency</p>
+                        <p class="role">Co-Investigator</p>
+                        <p class="description">Brief description of this research project, highlighting your specific contributions and responsibilities.</p>
+                    </div>
+                </div>
+                
+                <h3>Awards & Honors</h3>
+                
+                <div class="grant-item award">
+                    <div class="grant-meta">
+                        <span class="grant-year">2024</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Research Excellence Award</h4>
+                        <p class="funder">Awarding Organization</p>
+                        <p class="description">Brief description of this award, its significance in your field, and the achievement it recognizes.</p>
+                    </div>
+                </div>
+                
+                <div class="grant-item award">
+                    <div class="grant-meta">
+                        <span class="grant-year">2022</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Best Paper Award</h4>
+                        <p class="funder">Conference Name</p>
+                        <p class="description">Brief description of the paper and its contribution to the field that led to this recognition.</p>
+                    </div>
+                </div>
+                
+                <h3>Fellowships</h3>
+                
+                <div class="grant-item fellowship">
+                    <div class="grant-meta">
+                        <span class="grant-year">2020-2022</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Prestigious Fellowship Name</h4>
+                        <p class="funder">Granting Institution</p>
+                        <p class="description">Brief description of this fellowship, its competitive nature, and the research it supported.</p>
+                    </div>
+                </div>
+                
+                <div class="grant-item fellowship">
+                    <div class="grant-meta">
+                        <span class="grant-year">2018-2019</span>
+                    </div>
+                    <div class="grant-content">
+                        <h4>Postdoctoral Fellowship</h4>
+                        <p class="funder">University or Research Institute</p>
+                        <p class="description">Brief description of the research conducted during this fellowship period.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
