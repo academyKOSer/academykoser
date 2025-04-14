@@ -95,4 +95,4 @@ Feel free to use this template for your personal academic website.
 
 ## Contact
 
-For questions or suggestions, please contact [your contact information].
+For questions or suggestions, please contact [jclunis@odu.edu].
