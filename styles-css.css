@@ -1,0 +1,381 @@
+/* General Styles */
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-color: #ecf0f1;
+    --dark-color: #2c3e50;
+    --text-color: #333;
+    --border-radius: 4px;
+    --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 30px 0;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.8;
+    margin-bottom: 20px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    padding: 8px 12px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+nav a.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+/* Profile Section */
+.profile {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.profile-image {
+    flex: 0 0 300px;
+}
+
+.profile-image img {
+    width: 100%;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+}
+
+.profile-content {
+    flex: 1;
+}
+
+h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-size: 2rem;
+}
+
+h3 {
+    color: var(--primary-color);
+    margin: 25px 0 15px;
+    font-size: 1.5rem;
+}
+
+.education-list, .interests-list, .contact-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.education-list li {
+    margin-bottom: 12px;
+}
+
+.degree {
+    font-weight: bold;
+    display: block;
+}
+
+.institution {
+    color: var(--dark-color);
+}
+
+.year {
+    color: #777;
+    margin-left: 10px;
+}
+
+.interests-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.interests-list li {
+    background-color: var(--light-color);
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.contact-list li {
+    margin-bottom: 8px;
+}
+
+.contact-list i {
+    width: 25px;
+    color: var(--secondary-color);
+}
+
+/* Social Links */
+.social-links {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.social-links ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.social-links a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    background-color: var(--light-color);
+    border-radius: 20px;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.social-links i {
+    font-size: 1.2rem;
+}
+
+/* Research Publications Page */
+.filter-controls {
+    margin: 20px 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    background-color: var(--light-color);
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+}
+
+.filter-btn:hover {
+    background-color: #ddd;
+}
+
+.filter-btn.active {
+    background-color: var(--secondary-color);
+    color: white;
+}
+
+.publication {
+    display: flex;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.pub-meta {
+    flex: 0 0 100px;
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.pub-content {
+    flex: 1;
+}
+
+.pub-content h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.authors, .journal, .conference, .book {
+    margin-bottom: 5px;
+}
+
+.abstract {
+    background-color: var(--light-color);
+    padding: 15px;
+    border-radius: var(--border-radius);
+    margin: 10px 0;
+    display: none;
+}
+
+.pub-links {
+    margin-top: 10px;
+}
+
+.pub-links a {
+    margin-right: 15px;
+    font-size: 0.9rem;
+}
+
+.pub-links i {
+    margin-right: 5px;
+}
+
+/* Grants & Awards Page */
+.grant-item {
+    display: flex;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.grant-meta {
+    flex: 0 0 150px;
+}
+
+.grant-year {
+    font-weight: bold;
+    color: var(--secondary-color);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.grant-amount {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.grant-content {
+    flex: 1;
+}
+
+.grant-content h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.funder, .role {
+    color: #555;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+.description {
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 50px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .profile {
+        flex-direction: column;
+    }
+    
+    .profile-image {
+        flex: 0 0 auto;
+        max-width: 250px;
+        margin: 0 auto 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .publication, .grant-item {
+        flex-direction: column;
+    }
+    
+    .pub-meta, .grant-meta {
+        margin-bottom: 10px;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    .social-links ul {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 0 10px;
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+}
