@@ -1,20 +1,5 @@
-// Set current year in footer
+// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Set current year in footer
-    document.getElementById('current-year').textContent = new Date().getFullYear();
-    
-    // Toggle abstract visibility
-    window.toggleAbstract = function(link) {
-        const abstractElement = link.parentElement.nextElementSibling;
-        
-        if (abstractElement.style.display === 'block') {
-            abstractElement.style.display = 'none';
-            link.textContent = 'Show Abstract';
-        } else {
-            abstractElement.style.display = 'block';
-            link.textContent = 'Hide Abstract';
-        }
-    };
     
     // Filter publications and grants
     const filterButtons = document.querySelectorAll('.filter-btn');
@@ -30,10 +15,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Research page filtering
             if (document.querySelector('.publication-list')) {
                 const publications = document.querySelectorAll('.publication');
+                const sectionHeadings = document.querySelectorAll('.publication-list h3');
                 
                 if (filter === 'all') {
                     publications.forEach(pub => pub.style.display = 'flex');
-                    document.querySelectorAll('h3').forEach(heading => heading.style.display = 'block');
+                    sectionHeadings.forEach(heading => heading.style.display = 'block');
                 } else {
                     // Hide/show relevant publications
                     publications.forEach(pub => {
@@ -45,12 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     
                     // Hide/show section headings based on whether they have visible children
-                    document.querySelectorAll('h3').forEach(heading => {
-                        const nextHeading = heading.nextElementSibling;
+                    sectionHeadings.forEach(heading => {
                         let hasVisiblePublications = false;
+                        let currentElement = heading.nextElementSibling;
                         
-                        // Check if there are visible publications after this heading
-                        let currentElement = nextHeading;
+                        // Check all elements until the next heading or end
                         while (currentElement && !currentElement.tagName.match(/^H[1-3]$/i)) {
                             if (currentElement.classList.contains('publication') && 
                                 currentElement.style.display !== 'none') {
@@ -68,10 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
             // Grants page filtering
             if (document.querySelector('.grants-list')) {
                 const grantItems = document.querySelectorAll('.grant-item');
+                const grantHeadings = document.querySelectorAll('.grants-list h3');
                 
                 if (filter === 'all') {
                     grantItems.forEach(item => item.style.display = 'flex');
-                    document.querySelectorAll('h3').forEach(heading => heading.style.display = 'block');
+                    grantHeadings.forEach(heading => heading.style.display = 'block');
                 } else {
                     // Hide/show relevant grants
                     grantItems.forEach(item => {
@@ -83,12 +69,11 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                     
                     // Hide/show section headings based on whether they have visible children
-                    document.querySelectorAll('h3').forEach(heading => {
-                        const nextHeading = heading.nextElementSibling;
+                    grantHeadings.forEach(heading => {
                         let hasVisibleItems = false;
+                        let currentElement = heading.nextElementSibling;
                         
-                        // Check if there are visible items after this heading
-                        let currentElement = nextHeading;
+                        // Check all elements until the next heading or end
                         while (currentElement && !currentElement.tagName.match(/^H[1-3]$/i)) {
                             if (currentElement.classList.contains('grant-item') && 
                                 currentElement.style.display !== 'none') {
@@ -101,6 +86,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         heading.style.display = hasVisibleItems ? 'block' : 'none';
                     });
                 }
+            }
+        });
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });
